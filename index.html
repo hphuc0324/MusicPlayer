@@ -19,7 +19,7 @@
                     <div class="play-list scrollable">
                         <div class="row random__list">
                             <h3 class="random-list__heading">Random playlist</h3>
-                            <div class="col l-6">
+                            <!-- <div class="col l-6">
                                 <div class="random-song__wrap">
                                     <div class="random-song__info">
                                         <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
@@ -28,73 +28,16 @@
                                     <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
                                     <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
                                 </div> 
-                            </div>
-                            <div class="col l-6">
-                                <div class="random-song__wrap">
-                                    <div class="random-song__info">
-                                        <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
-                                        <span class="random-song__name">99%</span>
-                                    </div>
-                                    <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
-                                </div> 
-                            </div>
-                            <div class="col l-6">
-                                <div class="random-song__wrap">
-                                    <div class="random-song__info">
-                                        <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
-                                        <span class="random-song__name">99%</span>
-                                    </div>
-                                    <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
-                                </div> 
-                            </div> 
-                            <div class="col l-6">
-                                <div class="random-song__wrap">
-                                    <div class="random-song__info">
-                                        <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
-                                        <span class="random-song__name">99%</span>
-                                    </div>
-                                    <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
-                                </div> 
-                            </div> 
-                            <div class="col l-6">
-                                <div class="random-song__wrap">
-                                    <div class="random-song__info">
-                                        <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
-                                        <span class="random-song__name">99%</span>
-                                    </div>
-                                    <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
-                                </div> 
-                            </div> 
-                            <div class="col l-6">
-                                <div class="random-song__wrap">
-                                    <div class="random-song__info">
-                                        <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
-                                        <span class="random-song__name">99%</span>
-                                    </div>
-                                    <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
-                                </div> 
-                            </div>     
+                            </div> -->
+ 
                         </div>
 
                         <div class="row other__list">
                             <h3 class="other-list__heading">Other songs</h3>
+                            
+                            
                             <div class="col l-3">
                                 <div class="other-song__wrap">
-
-                                </div>
-                            </div>
-                            <div class="col l-3">
-                                <div class="other-song__wrap">
-
-                                </div>
-                            </div>
-                            <div class="col l-3">
-                                <div class="other-song__wrap playing">
                                     <div style="background-image: url('./assets/images/99.jpg');" class="other-song__avt"></div>
                                     <p class="other-song__name">Thờ er</p>
                                     <p class="other-song__artists">MCK, Lope Pham</p>
@@ -103,21 +46,7 @@
                                 </div>
                                 
                             </div>
-                            <div class="col l-3">
-                                <div class="other-song__wrap">
-
-                                </div>
-                            </div>
-                            <div class="col l-3">
-                                <div class="other-song__wrap">
-
-                                </div>
-                            </div>
-                            <div class="col l-3">
-                                <div class="other-song__wrap">
-
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -157,7 +86,7 @@
                 </div>
                 <div class="playbar__progress">
                     <span class="time--current">0:00</span>
-                    <input type="range" class="input__progress" oninput="progressInput(this)">
+                    <input type="range" class="input__progress" oninput="app.progressInput(this)">
                     <span class="time--total">-2:47</span>
                 </div>
             </div>
@@ -166,18 +95,11 @@
             <div class="playbar__volumne unmute">
                 <i id="unmuteBtn" class="btn btn--white btn--small btn--grey fa-solid fa-volume-high"></i>
                 <i id="muteBtn" class="btn btn--white btn--grey fa-solid fa-volume-xmark hide"></i>
-                <input type="range" class="volumne__amount" oninput="progressInput(this)">
+                <input type="range" class="volumne__amount" oninput="app.progressInput(this)">
             </div>
         </div>
     </div>
-
-    <script>
-        function progressInput(item){
-            let sliderValue = item.value;
-            item.style.background = `linear-gradient(to right, var(--color-theme) ${sliderValue}%, #ccc ${sliderValue}%)`;
-            console.log(sliderValue);
-        }
-
-    </script>
+    <audio src="" id="audio__elem"></audio>
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
