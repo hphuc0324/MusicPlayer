@@ -1,0 +1,383 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    font-family: sans-serif;
+    background-color: var(--color-black);
+}
+
+
+.container{
+   margin-top: 16px; 
+   width: 100vw;
+}
+
+.grid{
+    background-color: var(--color-black);
+    height: 100%;
+}
+
+.scrollable{
+    overflow: auto;
+    overflow-x: hidden;
+    padding-bottom: 128px;
+}
+
+
+.play-list,  .current-song{
+    background-color: #181818;
+    max-height: 100vh;
+    border-radius: 10px;
+}
+
+.play-list:hover::-webkit-scrollbar-thumb{
+    background: #555;
+}
+
+
+/* Favortie song */
+
+.random__list, .other__list{
+   margin: 8px;
+}
+
+.random-song__wrap{
+    display: flex;
+    background-color: #212121;
+    height: 45px;
+    border-radius: 5px;
+    align-items: center;
+    transition: all 0.2s ease;
+    justify-content: space-between;
+    margin: 6px 0;
+}
+
+.random-song__wrap.playing .btn__play{
+    display: none;
+}
+
+.random-song__wrap:hover, .other-song__wrap:hover{
+    cursor: pointer;
+    background-color: #2a2a2a;
+}
+
+.random-song__wrap:hover .btn__play{
+    display: block;
+}
+
+.random-song__wrap.playing .btn__pause{
+    display: block;
+}
+
+.random-song__wrap.playing .btn__play{
+    display: none;
+}
+
+.random-list__heading{
+    color: #fff;
+    width: 100%;
+    margin: 12px 6px;
+    font-size: 2.5rem;
+}
+
+.random-song__info{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.random-song__avt{
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-position: center;
+    border-bottom-left-radius: inherit;
+    border-top-left-radius: inherit;
+}
+
+.random-song__name{
+    margin-left: 8px;
+    max-width: 60%;
+    font-weight: 600;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.btn.hide{
+    display: none;
+}
+
+
+
+/* End favorite song */
+
+
+/* Other song */
+.other-list__heading{
+    color: #fff;
+    width: 100%;
+    margin: 12px 6px;
+    font-size: 2rem;
+    font-weight: 550;
+}
+
+.other-song__wrap{
+    height: 250px;
+    background-color: #212121;
+    border-radius: 5px;
+    margin: 16px 6px;
+    padding: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.other-song__avt{
+    margin: 8px auto;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background-color: aqua;
+    border-radius: 8px;
+    background-size: contain;
+    background-position: center;
+}
+
+.other-song__name, .other-song__artists{
+    overflow: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    text-overflow: ellipsis;
+}
+
+.other-song__name{
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.other-song__artists{
+    font-size: 1.3rem;
+    color: #b2b2b2;
+    font-weight: 500;
+}
+
+.other-song__name, .other-song__artists{
+    margin: auto 5%;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.other-song__wrap:hover .btn.btn__play{
+    display: block;
+} 
+
+.other-song__wrap .btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 24px;
+}
+
+.other-song__wrap.playing .btn__play{
+    display: none !important;
+}
+
+.other-song__wrap.playing .btn__pause{
+    display: block;
+}
+
+/* End other song */
+
+
+
+
+/* Scrollbar */
+.scrollable::-webkit-scrollbar {
+    width: 12px;
+    height: 10px !important;
+  }
+  
+  /* Track */
+.scrollable::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+   
+  /* Handle */
+.scrollable::-webkit-scrollbar-thumb {
+    background: transparent; 
+   
+  }
+  
+  /* Handle on hover */
+.scrollable::-webkit-scrollbar-thumb:hover {
+    background: #6c6a6a !important; 
+  }
+/* End scrollbar */
+
+
+/* Current song */
+.current-song{
+    padding: 12px;  
+    height: 100vh;
+    width: 100%;
+}
+
+.current-song__avt{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.current-song__heading{
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 8px 0;
+}
+
+.current-song__name{
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 550;
+    margin: 12px 0 6px;
+}
+
+.current-song__artists{
+    font-size: 1.5rem;
+    color: #b2b2b2;
+    font-weight: 500;
+}
+
+.current-song__name, .current-song__artists{
+    overflow: hidden;
+    white-space: nowrap; /* Don't forget this one */
+    text-overflow: ellipsis;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;;
+}
+/* End current song */
+
+/* Playbar */
+.playbar{
+    background-color: var(--color-black);
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    bottom: 0;
+    margin: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.play-song__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.play-song__avt{
+    height: 60px;
+    aspect-ratio: 1/1;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 5px;
+}
+
+.play-song__name, .play-song__artists{
+    color: #fff;
+    margin: 6px 8px;
+}
+
+.play-song__name{
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.play-song__artists{
+    font-size: 1rem;
+}
+
+.playbar__nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time--current, .time--total{
+    color: #b2b2b2;
+    margin: 0 4px;
+} 
+
+.input__progress{
+    width: 400px;
+}
+
+.volumne__amount{
+    width: 100px;
+}
+
+input[type='range']{
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+   
+    cursor: pointer;
+    outline: none;
+    border-radius: 15px;
+    /*  overflow: hidden;  remove this line*/
+  
+    /* New additions */
+    height: 4px;
+    background: #4d4d4d;
+}
+
+input[type='range']::-webkit-slider-thumb{
+  
+    -webkit-appearance: none;
+    appearance: none;
+    /* creating a custom design */
+    height: 12px;
+    width: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+  
+    /* box-shadow: -407px 0 0 400px #f50; emove this line */
+    transition: .2s ease-in-out;
+}
+
+
+
+.playbar__action{
+   margin: 4px;
+   width: 280px;
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+.playbar__volumne{
+    display: flex;
+    align-items: center;
+}
+
+#unmuteBtn, #muteBtn{
+    margin-right: 8px;
+}
+
+.playbar__volumne.mute #unmuteBtn{
+    display: none;
+}
+
+.playbar__volumne.mute #muteBtn{
+    display: block;
+}
+/* End playbar */
