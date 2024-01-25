@@ -36,16 +36,16 @@
                             <h3 class="other-list__heading">Other songs</h3>
                             
                             
-                            <div class="col l-3">
-                                <div class="other-song__wrap">
+                            <!-- <div class="col l-3">
+                                <div class="other-song__wrap playing">
                                     <div style="background-image: url('./assets/images/99.jpg');" class="other-song__avt"></div>
                                     <p class="other-song__name">Thờ er</p>
                                     <p class="other-song__artists">MCK, Lope Pham</p>
                                     <i class="btn btn--big btn--theme btn__play fa-solid fa-circle-play hide"></i>
-                                    <i class="btn btn--big btn--theme btn__pause fa-solid fa-circle-pause hide"></i>
+                                    <i class="btn btn--medium btn--theme btn__pause fa-solid fa-chart-simple hide"></i>
                                 </div>
                                 
-                            </div>
+                            </div> -->
                             
                         </div>
                     </div>
@@ -77,29 +77,29 @@
 
             <div class="playbar__nav">
                 <div class="playbar__action">
-                    <i class="btn btn--small btn--grey fa-solid fa-shuffle"></i>
-                    <i class="btn btn--small btn--grey fa-solid fa-backward-step"></i>
-                    <i class="btn btn--medium btn--white btn__play fa-solid fa-circle-play"></i>
-                    <i class="btn btn--medium btn--white btn__pause fa-solid fa-circle-pause hide"></i>
-                    <i class="btn btn--small btn--grey fa-solid fa-forward-step"></i>
-                    <i class="btn btn--small btn--grey fa-solid fa-repeat"></i>
+                    <i id="shuffle" class="btn btn--small btn--grey fa-solid fa-shuffle"></i>
+                    <i id="back" class="btn btn--small btn--grey fa-solid fa-backward-step"></i>
+                    <i id="play--main" class="btn btn--medium btn--white btn__play fa-solid fa-circle-play"></i>
+                    <i id="pause--main" class="btn btn--medium btn--white btn__pause fa-solid fa-circle-pause hide"></i>
+                    <i id="next" class="btn btn--small btn--grey fa-solid fa-forward-step"></i>
+                    <i id="loop" class="btn btn--small btn--grey fa-solid fa-repeat"></i>
                 </div>
                 <div class="playbar__progress">
                     <span class="time--current">0:00</span>
-                    <input type="range" class="input__progress" oninput="app.progressInput(this)">
-                    <span class="time--total">-2:47</span>
+                    <input type="range" value="0" max="100" class="input__progress">
+                    <span class="time--total">0:00</span>
                 </div>
             </div>
 
             
-            <div class="playbar__volumne unmute">
-                <i id="unmuteBtn" class="btn btn--white btn--small btn--grey fa-solid fa-volume-high"></i>
-                <i id="muteBtn" class="btn btn--white btn--grey fa-solid fa-volume-xmark hide"></i>
-                <input type="range" class="volumne__amount" oninput="app.progressInput(this)">
+            <div class="playbar__volumne">
+                <i id="mute" class="btn btn--white btn--small btn--grey fa-solid fa-volume-high"></i>
+                <i id="unmute" class="btn btn--white btn--small btn--grey fa-solid fa-volume-xmark hide"></i>
+                <input type="range" class="volumne__amount" value="100" oninput="app.progressInput(this)">
             </div>
         </div>
     </div>
-    <audio src="" id="audio__elem"></audio>
+    <audio id="audio__elem" preload="metadata"></audio>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>

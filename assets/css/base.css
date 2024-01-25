@@ -610,9 +610,13 @@
 
 .btn.btn--small{
     font-size: 1.8rem;
-    padding: 6px;
+    padding: 8px;
 }
 
 .btn.btn--big{
     font-size: 4.8rem;
+}
+
+.btn.active{
+    color: var(--color-theme) !important;
 }

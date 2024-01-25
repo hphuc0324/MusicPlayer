@@ -103,7 +103,7 @@ html{
 
 .random-song__name{
     margin-left: 8px;
-    max-width: 60%;
+    max-width: 80%;
     font-weight: 600;
     color: white;
     font-size: 1.4rem;
@@ -245,7 +245,7 @@ html{
     color: #fff;
     font-size: 3rem;
     font-weight: 550;
-    margin: 8px 0 6px;
+    margin: 6px 0 6px;
 }
 
 .current-song__artists{
@@ -278,8 +278,8 @@ html{
 
 .play-song__info{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 220px;
 }
 
 .play-song__avt{
@@ -294,15 +294,16 @@ html{
 .play-song__name, .play-song__artists{
     color: #fff;
     margin: 6px 8px;
+    font-weight: 500;
 }
 
 .play-song__name{
     font-size: 1.3rem;
-    font-weight: 500;
 }
 
 .play-song__artists{
-    font-size: 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
 }
 
 .playbar__nav{
@@ -373,11 +374,37 @@ input[type='range']::-webkit-slider-thumb{
     margin-right: 8px;
 }
 
-.playbar__volumne.mute #unmuteBtn{
+.playbar__volumne.mute #mute{
     display: none;
 }
 
-.playbar__volumne.mute #muteBtn{
+.playbar__volumne.mute #unmute{
     display: block;
 }
+
+.playbar__nav.playing .btn__play{
+    display: none;
+}
+
+.playbar__nav.playing .btn__pause{
+    display: block;
+}
+
+#play--main:hover, #pause--main:hover{
+    animation: scaleUp 0.2s forwards;
+    /* transition: all 0.2s ease; */
+}
+
+#mute:hover, #unmute:hover, #shuffle:hover, #back:hover, #next:hover{
+    color: #fce8e8;
+}
 /* End playbar */
+
+@keyframes scaleUp {
+    from{
+        scale: 1;
+    }
+    to{
+        scale: 1.2;
+    }
+}
