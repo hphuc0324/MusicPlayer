@@ -36,64 +36,102 @@ var app = {
 
     songs:[
         {
-            'id': 10,
-            'name': 'Đánh đổi',
-            'artists': ['Obito', 'MCK'],
-            'audio-source': './assets/mp3/DanhDoi.mp3'
+            'id': 1,
+            'name': 'Đánh Đổi',
+            'artists': ['Obito', 'MCK', 'Shiki'],
+            'audio-source': './assets/mp3/DanhDoi.mp3',
+            'cover-image': './assets/images/danhdoi.png'
         },
         {
             'id': 2,
-            'name': 'Anh Da On Hon',
+            'name': 'Anh Đã Ổn Hơn',
             'artists': ['MCK'],
-            'audio-source': './assets/mp3/AnhDaOnHon.mp3'
+            'audio-source': './assets/mp3/AnhDaOnHon.mp3',
+            'cover-image': './assets/images/anhdaonhon.png'
         },
         {
             'id': 3,
-            'name': 'Buon Hay Vui',
-            'artists': ['VSOUL', 'MCK', 'Obito', 'Ronboongz'],
-            'audio-source': './assets/mp3/BuonHayVui.mp3'
+            'name': 'Buồn hay Vui',
+            'artists': ['VSOUL', 'MCK', 'Obito', 'Ronboogz'],
+            'audio-source': './assets/mp3/BuonHayVui.mp3',
+            'cover-image': './assets/images/buonhayvui.png'
         },
         {
             'id': 4,
-            'name': 'Diu anh luon giu kin trong tym',
-            'artists': ['MCK', 'tlinh'],
-            'audio-source': './assets/mp3/AnhDaOnHon.mp3'
+            'name': 'Thờ Er',
+            'artists': ['MCK'],
+            'audio-source': './assets/mp3/ThoEr.mp3',
+            'cover-image': './assets/images/thoer.png'
         },
         {
             'id': 5,
-            'name': 'song 1',
-            'artists': ['MCK', 'tlinh'],
-            'audio-source': './assets/mp3/AnhDaOnHon.mp3'
+            'name': 'Show Me Love',
+            'artists': ['MCK'],
+            'audio-source': './assets/mp3/ShowMeLove.mp3',
+            'cover-image': './assets/images/showmelove.png'
         },
         {
             'id': 6,
-            'name': 'song 1',
-            'artists': ['MCK', 'tlinh'],
-            'audio-source': './assets/mp3/AnhDaOnHon.mp3'
+            'name': 'Chương 2 Của Tương Lai',
+            'artists': ['Wean', 'MCK'],
+            'audio-source': './assets/mp3/ChuongHaiCuaTuongLai.mp3',
+            'cover-image': './assets/images/chuong2cuatuonglai.png'
         },
         {
             'id': 7,
-            'name': 'song 1',
-            'artists': ['MCK', 'tlinh'],
-            'audio-source': './assets/mp3/AnhDaOnHon.mp3'
+            'name': 'Anhs Ems',
+            'artists': ['QNT', 'RZ Mas', 'Wxrdie'],
+            'audio-source': './assets/mp3/AnhsEms.mp3',
+            'cover-image': './assets/images/anhsems.jpg'
         },
         {
             'id': 8,
-            'name': 'song 1',
-            'artists': ['MCK', 'tlinhdsai sadih sdih'],
-            'audio-source': './assets/mp3/DanhDoi.mp3'
+            'name': 'Xuất Phát Điểm',
+            'artists': ['Obito', 'Shiki'],
+            'audio-source': './assets/mp3/XuatPhatDiem.mp3',
+            'cover-image': './assets/images/xuatphatdiem.jpg'
         },
         {
             'id': 9,
-            'name': 'song 1',
-            'artists': ['MCK', 'Obito'],
-            'audio-source': './assets/mp3/DanhDoi.mp3'
+            'name': 'Tựa Đêm Nay',
+            'artists': ['The Cassette'],
+            'audio-source': './assets/mp3/TuaDemNay.mp3',
+            'cover-image': './assets/images/tuademnay.jpg'
         },
         {
             'id': 10,
-            'name': 'song 1',
-            'artists': ['Wean', 'Naomi'],
-            'audio-source': './assets/mp3/DanhDoi.mp3'
+            'name': 'Xích Thêm Chút',
+            'artists': ['RPT Groovie', 'tlinh', 'MCK'],
+            'audio-source': './assets/mp3/XTC.mp3',
+            'cover-image': './assets/images/xtc.jpg'
+        },
+        {
+            'id': 11,
+            'name': 'Xanh',
+            'artists': ['Ngọt'],
+            'audio-source': './assets/mp3/Xanh.mp3',
+            'cover-image': './assets/images/xanh.jpg'
+        },
+        {
+            'id': 12,
+            'name': 'Dalat',
+            'artists': ['Thoại 004'],
+            'audio-source': './assets/mp3/Dalat.mp3',
+            'cover-image': './assets/images/dalat.jfif'
+        },
+        {
+            'id': 13,
+            'name': 'Một Hôm Trên Những Mái Nhà',
+            'artists': ['Thoại 004'],
+            'audio-source': './assets/mp3/MotHomTrenNhungMaiNha.mp3',
+            'cover-image': './assets/images/mothomtrennhungmainha.jfif'
+        },
+        {
+            'id': 14,
+            'name': 'Thiên Hà Trước Hiên Nhà',
+            'artists': ['Datmaniac'],
+            'audio-source': './assets/mp3/ThienHaTruocHienNha.mp3',
+            'cover-image': './assets/images/thienhatruochiennha.jfif'
         }
     ],
     
@@ -177,7 +215,7 @@ var app = {
         element.innerHTML += `
         <div class="random-song__wrap playable">
             <div class="random-song__info">
-                <div style="background-image: url('./assets/images/99.jpg');" class="random-song__avt"></div>
+                <div style="background-image: url(${song['cover-image']});" class="random-song__avt"></div>
                 <span class="random-song__name">${song.name}</span>
             </div>
             <i class="btn btn--medium btn--theme btn__play fa-solid fa-circle-play hide"></i>
@@ -197,7 +235,7 @@ var app = {
 
         element.innerHTML += `
         <div class="other-song__wrap playable">
-            <div style="background-image: url('./assets/images/99.jpg');" class="other-song__avt"></div>
+            <div style="background-image: url(${song['cover-image']});" class="other-song__avt"></div>
             <p class="other-song__name">${song.name}</p>
             <p class="other-song__artists">${song.artists.join(', ')}</p>
             <i class="btn btn--big btn--theme btn__play fa-solid fa-circle-play hide"></i>
@@ -221,8 +259,10 @@ var app = {
     updateCurrentSong: function(){
         currentSongBlock.querySelector('.current-song__name').innerText = this.currentSong.name;
         currentSongBlock.querySelector('.current-song__artists').innerText = this.currentSong.artists.join(', ');
+        currentSongBlock.querySelector('.current-song__avt').style.backgroundImage = `url(${this.currentSong['cover-image']})`;
         $('.play-song__name').innerText = this.currentSong.name;
         $('.play-song__artists').innerText = this.currentSong.artists.join(', ');
+        $('.play-song__avt').style.backgroundImage = `url(${this.currentSong['cover-image']})`;
     },
 
     handleEvents: function(){

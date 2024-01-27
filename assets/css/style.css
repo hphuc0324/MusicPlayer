@@ -95,7 +95,7 @@ html{
 .random-song__avt{
     height: 100%;
     aspect-ratio: 1/1;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     border-bottom-left-radius: inherit;
     border-top-left-radius: inherit;
@@ -143,7 +143,7 @@ html{
     aspect-ratio: 1/1;
     background-color: aqua;
     border-radius: 8px;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
 }
 
@@ -228,7 +228,7 @@ html{
 .current-song__avt{
     width: 100%;
     aspect-ratio: 1/1;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
@@ -283,9 +283,9 @@ html{
 }
 
 .play-song__avt{
-    height: 60px;
+    height: 50px;
     aspect-ratio: 1/1;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 5px;
