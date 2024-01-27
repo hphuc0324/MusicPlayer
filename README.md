@@ -22,4 +22,4 @@ There are still some bugs that i have found solutions for them such as
 <li>Clicking on the first song of Random list when the web is loaded will not play that song</li>
 I will try to fix them in the near future. Any suggestion will be appreciated!
 <br>
-You can try out the project here [Music Player](https://hphuc0324.github.io/MusicPlayer/)
+You can try out the project here <a href="https://hphuc0324.github.io/MusicPlayer/">Music Player</a>
