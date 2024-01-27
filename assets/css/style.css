@@ -23,7 +23,7 @@ html{
 
 .scrollable{
     overflow: auto;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     padding-bottom: 128px;
 }
 
