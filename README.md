@@ -21,5 +21,6 @@ There are still some bugs that i have found solutions for them such as
 <li>Changing song's progress by dragging the bar instead of clicking make the background color go wrong.</li>
 <li>Clicking on the first song of Random list when the web is loaded will not play that song</li>
 I will try to fix them in the near future. Any suggestion will be appreciated!
+</ul>
 <br>
 <p>You can try out my project here <a href="https://hphuc0324.github.io/MusicPlayer/">Music Player</a></p>
